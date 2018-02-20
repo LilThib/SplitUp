@@ -26,6 +26,11 @@ nav
   font-size: 36pt;
 }
 
+#BeginBtn:hover
+{
+  cursor: pointer;
+}
+
 .jumbotron
 {
     background-color:  #666;
