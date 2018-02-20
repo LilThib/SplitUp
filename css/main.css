@@ -32,6 +32,8 @@ nav
 #BeginBtn:hover
 {
   cursor: pointer;
+  background-color: lightgrey;
+  font-weight: bold;
 }
 
 .jumbotron
