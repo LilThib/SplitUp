@@ -41,6 +41,9 @@ nav
     background-color:  #666;
     font-family: "Iceland";
     font-weight: bolder;
+    font-size: 20pt;
+    text-align: center;
+    height: auto;
 }
 .border
 {
@@ -60,16 +63,4 @@ nav
 {
 
 	font-family: "MedievalSharp";
-}
-.box_dragndrop{
-    display: none;
-}
-.box_uploading{
-    display: none;
-}
-.box_success{
-    display: none;
-}
-.box_error {
-  display: none;
 }
