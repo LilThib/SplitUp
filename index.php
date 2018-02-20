@@ -45,7 +45,7 @@
             </div>
 
             <div class="row justify-content-center col-md-12">
-                <h3>Bienvenue sur le site Split-Up!</h3>
+                <h1>Bienvenue sur le site Split-Up!</h1>
             </div>
 
             <div class="col-md-4 hidden-xs hidden-sm">
