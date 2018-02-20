@@ -21,7 +21,7 @@ nav
 .jumbotron
 {
     background-color:  #666;
-    font-family: garamond;
+    font-family: "Iceland";
     font-weight: bolder;
 }
 .border
@@ -40,8 +40,8 @@ nav
 
 .titlel
 {
-	
-	font-family: "Cherry Cream Soda";
+
+	font-family: "MedievalSharp";
 }
 .box_dragndrop{
     display: none;
