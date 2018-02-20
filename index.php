@@ -4,7 +4,7 @@
 
 <html lang="en">
     <head>
-        <title>Blog-it</title>
+        <title>Split-Up!</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -29,7 +29,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand titlel nav-link" href="index.php">Blog-IT</a> 
+                    <a class="navbar-brand titlel nav-link" href="index.php">Blog-IT</a>
         <!--<a class="nav-link active" href="index.php">Home</a>
         <a class="nav-link" href="post.php">Post</a>-->
         <!--        </div>
@@ -52,7 +52,7 @@
             <button class="navbar-toggler navbar-toggler-right" style="color: lightgrey;" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon "style="padding-top: none;"><h1 style="margin-top:-15px;">&Congruent;</h1></span>
             </button>
-            <a class="navbar-brand title1" style="font-family: Cherry Cream Soda" href="index.php">Blog-it</a>
+            <a class="navbar-brand title1" style="font-family: Cherry Cream Soda" href="index.php">Split-Up</a>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
@@ -81,101 +81,25 @@
             <div class="col-md-12">
                 <!--<div class="jumbotron">-->
                 <p class="jumbotron">
-                    Fusce convallis, mauris imperdiet gravida bibendum, nisl 
-                    turpis suscipit mauris, sed placerat ipsum urna sed risus. 
-                    In convallis tellus a mauris. Curabitur non elit ut libero 
-                    tristique sodales. Mauris a lacus. Donec mattis semper leo. 
-                    In hac habitasse platea dictumst. Vivamus facilisis diam at 
-                    odio. Mauris dictum, nisi eget consequat elementum, lacus 
-                    ligula molestie metus, non feugiat orci magna ac sem. Donec 
-                    turpis. Donec vitae metus. Morbi tristique neque eu mauris. 
-                    Quisque gravida ipsum non sapien. Proin turpis lacus, 
-                    scelerisque vitae, elementum at, lobortis ac, quam. Aliquam 
-                    dictum eleifend risus. In hac habitasse platea dictumst. 
-                    Etiam sit amet diam. Suspendisse odio. Suspendisse nunc. 
+                    Fusce convallis, mauris imperdiet gravida bibendum, nisl
+                    turpis suscipit mauris, sed placerat ipsum urna sed risus.
+                    In convallis tellus a mauris. Curabitur non elit ut libero
+                    tristique sodales. Mauris a lacus. Donec mattis semper leo.
+                    In hac habitasse platea dictumst. Vivamus facilisis diam at
+                    odio. Mauris dictum, nisi eget consequat elementum, lacus
+                    ligula molestie metus, non feugiat orci magna ac sem. Donec
+                    turpis. Donec vitae metus. Morbi tristique neque eu mauris.
+                    Quisque gravida ipsum non sapien. Proin turpis lacus,
+                    scelerisque vitae, elementum at, lobortis ac, quam. Aliquam
+                    dictum eleifend risus. In hac habitasse platea dictumst.
+                    Etiam sit amet diam. Suspendisse odio. Suspendisse nunc.
                     In semper bibendum libero.
                 </p>
 
             </div>
 
             <div class="row justify-content-center col-md-12">
-                <h3>Dernières images</h3>
-            </div>
-            <div id="carouselExampleIndicators" class="col-md-12 carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <?php
-                    /*
-                     * for($i=0;$i<$img[].count;$i++)
-                     * {
-                     *      if($i==0)
-                     *      {
-                     *          echo "<li data-target="#carouselExampleIndicators" data-slide-to=$i class="active"></li>";
-                     *      }
-                     *      else
-                     *      {
-                     *          echo "<li data-target="#carouselExampleIndicators" data-slide-to=$i></li>";
-                     *      }
-                     * }
-                     */
-                    ?>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <?php
-                    /*
-                     * for($i=0;$i<$img[].count;$i++)
-                     * {
-                     *      if($i==0)
-                     *      {
-                     *       echo <div class="carousel-item active">;
-                     *           echo <img class="d-block w-100" src=$img[i] alt=$legend[i]>;
-                     *       echo </div>;
-                     *      }
-                     *      else
-                     *      {
-                     *          echo <div class="carousel-item">;
-                     *              echo <img class="d-block w-100" src=$img[i] alt=$legend[i]>;
-                     *          echo </div>;
-                     *      }
-                     * }
-                     */
-                    ?>
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="img/skyrim1.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="img/skyrim2.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="img/skyrim3.jpg" alt="Third slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="img/skyrim4.jpg" alt="Fourth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="img/skyrim5.jpg" alt="Fifth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="img/skyrim6.jpg" alt="Sixth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="img/skyrim7.jpg" alt="Seventh slide">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <h3></h3>
             </div>
 
             <div class="col-md-4 hidden-xs hidden-sm">
