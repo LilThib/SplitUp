@@ -21,6 +21,9 @@ nav
 
 #BeginBtn
 {
+  font-family: "Days One";
+  margin-left: 15%;
+  margin-right: 15%;
   width:70%;
   height: 10%;
   font-size: 36pt;
