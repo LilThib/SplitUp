@@ -10,10 +10,11 @@ $nbPerson = $nbPerson/$nbGroups;
 j=$nbGroups;
 for(i=0;i<$nbPeople;i++)
 {
-
   if (j>=$nbGroups)
-  {j=0;}
-
+  {
+    j=0;
+  }
+  
 
   j++;
 }
