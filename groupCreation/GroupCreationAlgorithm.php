@@ -1,4 +1,24 @@
-$nbPeople;
+<?php
+
+// Variables
+
+$button = filter_input(INPUT_POST, 'submit', FILTER_SANITIZE_STRING);
+$msg = "";
+
+if($button == NULL || $button = FALSE)
+{
+  $msg .= "Impossible de créer un groupe réesayyer ultérieurement";
+}
+else{
+  if($button == "maxGroup"){
+
+  }
+  else if($button == "maxPerson"){
+
+  }
+}
+
+/*$nbPeople;
 $nbGroups;
 $mod = $nbPeople % nbGroups;
 $nbPerson = $nbPeople-$mod
@@ -17,4 +37,4 @@ for(i=0;i<$nbPeople;i++)
 
 
   j++;
-}
+}*/
