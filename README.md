@@ -5,4 +5,4 @@ Par Jorge Goncalves, Grégory Preisig et Thibaut Michaud
 
 Créer un ou plusieurs groupes aléatoires à l'aide d'une liste crée manuellement ou
 par importation d'un fichier csv.
-**FUK U**
+**FUK U DI IS A TEST ! **
