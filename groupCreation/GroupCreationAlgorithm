@@ -14,7 +14,9 @@ for(i=0;i<$nbPeople;i++)
   {
     j=0;
   }
-  
+
 
   j++;
 }
+
+// ah
