@@ -29,7 +29,7 @@ else{
       {
         $j=0;
       }
-
+      //put the person in a group
 
       $j++;
     }
