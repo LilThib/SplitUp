@@ -21,3 +21,18 @@ function groupByNbGroup($listPeople, $nbGroups){
   }
   return $groups;
 }
+
+// Put random the list of person
+function shuffle_assoc($array) {
+        $keys = array_keys($array);
+
+        shuffle($keys);
+
+        foreach($keys as $key) {
+            $new[$key] = $array[$key];
+        }
+
+        $array = $new;
+
+        return $array;
+}

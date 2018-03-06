@@ -50,7 +50,7 @@ else{
 
     if($maxPersonValue !== NULL && $maxPersonValue !== FALSE){
       $group = array();
-      shuffl
+      
       foreach($ListPerson as $person){
 
       }
