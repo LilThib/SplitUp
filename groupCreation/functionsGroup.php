@@ -50,6 +50,7 @@ function groupByNbPerson($listPeople, $nbPerson){
 
   $nbGroup = ceil(count($listPeople) / $nbPerson);
 
+
   //Create groups
   for($i = 0; $i < $nbGroup; $i++){
     // Put people in a group
