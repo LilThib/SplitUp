@@ -19,5 +19,5 @@ function groupByNbGroup($listPeople, $nbGroups){
     $groups[j][i] = $listPerson[i];
     $j++;
   }
-  return $groups
+  return $groups;
 }
