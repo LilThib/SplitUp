@@ -48,9 +48,7 @@
                 <h1>Bienvenue sur le site Split-Up!</h1>
             </div>
 
-            <div class="col-md-4 hidden-xs hidden-sm">
-                &nbsp;
-            </div>
+            
 <div class="justify-content-center col-md-12">
 <a href="DynamicForm.php"><button id="BeginBtn">Commencer</button></a>
 </div>
