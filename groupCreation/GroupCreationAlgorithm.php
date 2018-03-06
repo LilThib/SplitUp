@@ -13,6 +13,8 @@ session_start();
 
 $buttonMaxPersonn = filter_input(INPUT_POST, 'btnMaxPerson', FILTER_SANITIZE_STRING);
 $buttonMaxGroup = filter_input(INPUT_POST, 'btnMaxGroup', FILTER_SANITIZE_STRING);
+$maxPersonValue = filter_input(INPUT_POST, 'maxPerson', FILTER_VALIDATE_INT);
+
 $msg = "";
 $listPerson = (isset($_SESSION['listPerson']))?$_SESSION['listPerson']:"";
 
@@ -46,8 +48,12 @@ else{
   }
   else if($buttonMaxPersonn !== NULL && $buttonMaxPersonn !== FALSE){
 
-    $maxPersonValue = filter_input(INPUT_POST, 'maxPerson', )
+    if($maxPersonValue !== NULL && $maxPersonValue !== FALSE){
 
+    }
+    else{
+      header('Location:groupPersonalisation.php?msg="Veuillez remplir avec que des nombres "')
+    }
   }
 }
 
