@@ -1,18 +1,28 @@
 <?php
 
+/*
+Project: SplitUp
+Autors: Jorge Goncalves, Grégory Preisig, Thibaut Michaud
+Description: Create a group with ultiple parameters, like the number or person
+per groups or the number of groups for a fixed amouth of person, etc
+Date Begin: 20.03.2018
+*/
+
 session_start();
 // Variables
 
-$button = filter_input(INPUT_POST, 'submit', FILTER_SANITIZE_STRING);
+$buttonMaxPersonn = filter_input(INPUT_POST, 'btnMaxPerson', FILTER_SANITIZE_STRING);
+$buttonMaxGroup = filter_input(INPUT_POST, 'btnMaxGroup', FILTER_SANITIZE_STRING);
 $msg = "";
 $listPerson = (isset($_SESSION['listPerson']))?$_SESSION['listPerson']:"";
 
-if($button == NULL || $button = FALSE)
+if($buttonMaxPersonn === NULL && $buttonMaxPersonn === NULL && $buttonMaxGroup===NULL
+  && $buttonMaxGroup === FALSE)
 {
   $msg .= "Impossible de créer un groupe réessayer ultérieurement";
 }
 else{
-  if($button == "maxGroup"){
+  if($buttonMaxGroup !== NULL && $buttonMaxGroup !== FALSE){
     $nbPeople;
     $nbGroups;
     $mod = $nbPeople % $nbGroups;
@@ -34,9 +44,11 @@ else{
       $j++;
     }
   }
-  else if($button == "maxPerson"){
+  else if($buttonMaxPersonn !== NULL && $buttonMaxPersonn !== FALSE){
 
-    $maxPersonn = filter_input()
+    $maxPersonValue = filter_input(INPUT_POST, 'maxPerson', )
 
   }
 }
+
+include_once'groupCreation.php';
