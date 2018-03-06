@@ -9,7 +9,7 @@ $listPerson = (isset($_SESSION['listPerson']))?$_SESSION['listPerson']:"";
 
 if($button == NULL || $button = FALSE)
 {
-  $msg .= "Impossible de créer un groupe réesayyer ultérieurement";
+  $msg .= "Impossible de créer un groupe réessayer ultérieurement";
 }
 else{
   if($button == "maxGroup"){
@@ -35,6 +35,8 @@ else{
     }
   }
   else if($button == "maxPerson"){
+
+    $maxPersonn = filter_input()
 
   }
 }
