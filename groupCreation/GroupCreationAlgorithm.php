@@ -11,14 +11,14 @@ Date Begin: 20.03.2018
 session_start();
 // Variables
 
-$buttonMaxPersonn = filter_input(INPUT_POST, 'btnMaxPerson', FILTER_SANITIZE_STRING);
+$buttonMaxPerson = filter_input(INPUT_POST, 'btnMaxPerson', FILTER_SANITIZE_STRING);
 $buttonMaxGroup = filter_input(INPUT_POST, 'btnMaxGroup', FILTER_SANITIZE_STRING);
 $maxPersonValue = filter_input(INPUT_POST, 'maxPerson', FILTER_VALIDATE_INT);
 
 $msg = "";
 $listPerson = (isset($_SESSION['listPerson']))?$_SESSION['listPerson']:"";
 
-if($buttonMaxPersonn === NULL && $buttonMaxPersonn === NULL && $buttonMaxGroup===NULL
+if($buttonMaxPerson === NULL && $buttonMaxPerson === FALSE && $buttonMaxGroup===NULL
   && $buttonMaxGroup === FALSE)
 {
   $msg .= "Impossible de créer un groupe réessayer ultérieurement";
@@ -49,10 +49,15 @@ else{
   else if($buttonMaxPersonn !== NULL && $buttonMaxPersonn !== FALSE){
 
     if($maxPersonValue !== NULL && $maxPersonValue !== FALSE){
+      $group = array();
+      shuffl
+      foreach($ListPerson as $person){
 
+      }
     }
     else{
-      header('Location:groupPersonalisation.php?msg="Veuillez remplir avec que des nombres "')
+      header('Location:groupPersonalisation.php?msg="Veuillez remplir avec que
+      des nombres le champ \"Le nombre de personne max\" "');
     }
   }
 }
