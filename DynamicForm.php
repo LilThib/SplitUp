@@ -32,5 +32,5 @@ function FormulaireDyn($nbPerson) {
     </fieldset>
     </form>';
 
-    return $finalHTML;
+    echo $finalHTML;
 }
