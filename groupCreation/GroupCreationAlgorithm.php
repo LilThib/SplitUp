@@ -11,6 +11,7 @@ Date Begin: 20.03.2018
 session_start();
 // Variables
 
+require_once 'functionsGroup.php';
 $buttonMaxPerson = filter_input(INPUT_POST, 'btnMaxPerson', FILTER_SANITIZE_STRING);
 $buttonMaxGroup = filter_input(INPUT_POST, 'btnMaxGroup', FILTER_SANITIZE_STRING);
 $maxPersonValue = filter_input(INPUT_POST, 'maxPerson', FILTER_VALIDATE_INT);
@@ -25,35 +26,13 @@ if($buttonMaxPerson === NULL && $buttonMaxPerson === FALSE && $buttonMaxGroup===
 }
 else{
   if($buttonMaxGroup !== NULL && $buttonMaxGroup !== FALSE){
-    $nbPeople;
-    $nbGroups;
-    $mod = $nbPeople % $nbGroups;
-    $nbPerson = $nbPeople-$mod
-    $nbPerson = $nbPerson/$nbGroups;
-    // $nbPerson : number of person per groups
-    // $nbPeople : numper of people in total
-    // $mod : number of person that cant be dispached equally between the groups
-
-    $j=$nbGroups;
-    for($i=0;$i<$nbPeople;$i++)
-    {
-      if ($j>=$nbGroups)
-      {
-        $j=0;
-      }
-      //put the person in a group
-      $group[j][i] = $listPerson[i];
-      $j++;
+      groupByNbGroup($listPerson, $nbGroups);
     }
   }
   else if($buttonMaxPersonn !== NULL && $buttonMaxPersonn !== FALSE){
 
     if($maxPersonValue !== NULL && $maxPersonValue !== FALSE){
-      $group = array();
-      
-      foreach($ListPerson as $person){
-
-      }
+      groupByNbPerson($listPeople, $maxPersonValue);
     }
     else{
       header('Location:groupPersonalisation.php?msg="Veuillez remplir avec que

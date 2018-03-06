@@ -36,3 +36,28 @@ function shuffle_assoc($array) {
 
         return $array;
 }
+
+function groupByNbPerson($listPeople, $nbPerson){
+  $allGroup = array();
+  $oneGroup = array();
+  $trueNoPeople = 0;
+
+  $listPeople = shuffle_assoc($listPeople);
+
+  $nbGroup = ceil(count($listPeople) / $nbPerson);
+
+  //Create groups
+  for($i = 0; $i < $nbGroup; $i++){
+    // Put people in a group
+    for($j = 0; $j < $nbPerson; $j++){
+      try{
+        array_push($onegroup, $listPeople[$j+$trueNoPeople]);
+      } catch (Exception $ex) {
+        break;
+      }
+    }
+    array_push($allGroup, $oneGroup);
+    $oneGroup = array();
+    $trueNoPeople = $trueNoPeople + 5;
+  }
+}
