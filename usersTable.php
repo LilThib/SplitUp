@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <?php
-include './DynamicForm.php';
 include './users.php';
 
 $msg = "";
@@ -10,12 +9,12 @@ $sexe = (isset($_POST['sexe'])) ? $_POST['sexe'] : "";
 if (isset($_POST['submitAdd'])) {
     addUser($name, $sexe);
     $msg = "Personne bien ajoutée";
-    header("Location: index.php");
+    header("Location: usersTable.php");
 }
 
 if (isset($_GET['ClearTable'])) {
     ClearUsers();
-    header("Location: index.php");
+    header("Location: usersTable.php");
 }
 ?>
 
@@ -108,13 +107,17 @@ if (isset($_GET['ClearTable'])) {
                     ?>
                 </div>
                 <div class="col-sm-12 col-md-8">
+                    <form action="ImportData.php" method="post" enctype="multipart/form-data">
+                        <label for="file">Import de fichier texte ou csv:</label> <input type="file" name="file" id="file">
+                        <input type="submit" value="Submit" class="btn btn-default center-block">
+                    </form>
                     <?php
-                        UsersTable();                       
+                    UsersTable();
                     ?>
                     <form name="clear">
                         <input id="ClearTable" name="ClearTable" type="submit" value="Vider le tableau" class="btn btn-default center-block" style="margin-top: 10px;">
                     </form>
-                    
+
                 </div>
                 <div class="col-sm-12 col-md-4">
                     <!--<p>

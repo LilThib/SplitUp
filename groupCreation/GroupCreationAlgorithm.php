@@ -29,10 +29,10 @@ else{
       groupByNbGroup($listPerson, $nbGroups);
     }
   }
-  else if($buttonMaxPersonn !== NULL && $buttonMaxPersonn !== FALSE){
+  else if($buttonMaxPerson !== NULL && $buttonMaxPerson !== FALSE){
 
     if($maxPersonValue !== NULL && $maxPersonValue !== FALSE){
-      groupByNbPerson($listPeople, $maxPersonValue);
+      groupByNbPerson($listPerson, $maxPersonValue);
     }
     else{
       header('Location:groupPersonalisation.php?msg="Veuillez remplir avec que
