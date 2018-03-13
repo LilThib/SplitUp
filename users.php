@@ -74,13 +74,4 @@ function readCSV($csvFile){
     fclose($file_handle);
     return $line_of_text;
 }
- 
- 
-// Set path to CSV file
-$csvFile = 'test.csv';
- 
-$csv = readCSV($csvFile);
-echo '<pre>';
-print_r($csv);
-echo '</pre>';
 ?>
