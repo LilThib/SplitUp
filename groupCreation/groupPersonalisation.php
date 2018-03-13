@@ -9,7 +9,7 @@ Date Begin: 20.03.2018
 <html lang="fr">
     <head>
         <title>Split-Up!</title>
-        
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -32,13 +32,13 @@ Date Begin: 20.03.2018
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Home </a>
+                        <a class="nav-link" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Create groups</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="usersTable.php">Manage people</a>
+                        <a class="nav-link" href="../usersTable.php">Manage people</a>
                     </li>
                 </ul>
             </div>
