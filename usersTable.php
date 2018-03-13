@@ -16,6 +16,12 @@ if (isset($_GET['ClearTable'])) {
     ClearUsers();
     header("Location: usersTable.php");
 }
+
+if (isset($_GET['exportTable'])) {
+    generateCsv($_SESSION['users']);
+    download($_SESSION['csv']);
+    header("Location: usersTable.php");
+}
 ?>
 
 <html lang="en">
@@ -57,6 +63,7 @@ if (isset($_GET['ClearTable'])) {
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-4">
+                    <!-- formulaire d'ajout -->
                     <form class="form-horizontal" method="POST">
                         <fieldset>
                             <!-- Form Name -->
@@ -119,6 +126,9 @@ if (isset($_GET['ClearTable'])) {
                     ?>
                     <form name="clear">
                         <input id="ClearTable" name="ClearTable" type="submit" value="Vider le tableau" class="btn btn-default center-block" style="margin-top: 10px;">
+                    </form>
+                    <form name="export">
+                        <input id="exportTable" name="exportTable" type="submit" value="Exporter le tableau" class="btn btn-default center-block" style="margin-top: 10px;">
                     </form>
 
                 </div>
