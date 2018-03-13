@@ -55,7 +55,12 @@ Date Begin: 20.03.2018
             <div class="row justify-content-center col-md-12">
                 <h1>Bienvenue sur le site Split-Up!</h1>
             </div>
-            <h2>Les groupes</h2>
+            <form>
+              <fieldset style="border-color:red;"><legend>groupes en fonction du nombre de personne par groupe</legend>
+                <input type="text">
+                </fieldset>
+            </form>
+            <h2>groupes en fonction du nombre de groupe total</h2>
 
         </div>
 
