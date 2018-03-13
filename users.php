@@ -66,12 +66,33 @@ function UsersTable() {
     echo '</table>';
 }
 
-function readCSV($csvFile){
+function readCSV($csvFile) {
     $file_handle = fopen($csvFile, 'r');
-    while (!feof($file_handle) ) {
+    while (!feof($file_handle)) {
         $line_of_text[] = fgetcsv($file_handle, 1024);
     }
     fclose($file_handle);
     return $line_of_text;
 }
-?>
+
+function generateCsv($data, $delimiter = ',', $enclosure = '"') {
+    $handle = fopen('php://temp', 'r+');
+    foreach ($data as $line) {
+        fputcsv($handle, $line, $delimiter, $enclosure);
+    }
+    rewind($handle);
+    $contents = "";
+    while (!feof($handle)) {
+        $contents .= fread($handle, 8192);
+    }
+    fclose($handle);
+    $_SESSION['csv'] = $contents;
+}
+
+function download($filepath) {
+    header('Content-Disposition: attachment; filename="' . basename($filepath) . '"');
+    header('Content-type: text/csv');
+    header('Content-Length: ' . filesize($filepath));
+    readfile($filepath);
+    exit;
+}
