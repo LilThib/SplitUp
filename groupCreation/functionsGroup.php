@@ -1,4 +1,6 @@
 <?php
+
+// Algo to group by number max of the group
 function groupByNbGroup($listPeople, $nbGroups){
   $listPeople = shuffle_assoc($listPeople);
   $nbPeople = count($listPeople);
@@ -40,29 +42,20 @@ function shuffle_assoc($array) {
         return $array;
 }
 
-
+// Algo to group by max personn
 function groupByNbPerson($listPeople, $nbPerson){
   $allGroup = array();
-  $oneGroup = array();
-  $trueNoPeople = 0;
-
   $listPeople = shuffle_assoc($listPeople);
 
-  $nbGroup = ceil(count($listPeople) / $nbPerson);
-
-
-  //Create groups
-  for($i = 0; $i < $nbGroup; $i++){
-    // Put people in a group
-    for($j = 0; $j < $nbPerson; $j++){
-      try{
-        array_push($onegroup, $listPeople[$j+$trueNoPeople]);
-      } catch (Exception $ex) {
-        break;
-      }
+  $j = 0;
+  $i = 0;
+  foreach ($listPeople as $personn) {
+    if($j >= $nbPerson){
+      $j = 0;
+      $i++;
     }
-    array_push($allGroup, $oneGroup);
-    $oneGroup = array();
-    $trueNoPeople = $trueNoPeople + 5;
+    $allGroup[$i][$j] = $person;
+    $j++;
   }
+  return $allGroup;
 }
