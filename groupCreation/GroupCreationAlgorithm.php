@@ -18,7 +18,7 @@ $maxPersonValue = filter_input(INPUT_POST, 'maxPerson', FILTER_VALIDATE_INT);
 
 $msg = "";
 $listPerson = (isset($_SESSION['listPerson']))?$_SESSION['listPerson']:"";
-
+$groupsRandom = array();
 if($buttonMaxPerson === NULL && $buttonMaxPerson === FALSE && $buttonMaxGroup===NULL
   && $buttonMaxGroup === FALSE)
 {
@@ -26,13 +26,13 @@ if($buttonMaxPerson === NULL && $buttonMaxPerson === FALSE && $buttonMaxGroup===
 }
 else{
   if($buttonMaxGroup !== NULL && $buttonMaxGroup !== FALSE){
-      groupByNbGroup($listPerson, $nbGroups);
+      $groupsRandom = groupByNbGroup($listPerson, $nbGroups);
     }
   }
   else if($buttonMaxPerson !== NULL && $buttonMaxPerson !== FALSE){
 
     if($maxPersonValue !== NULL && $maxPersonValue !== FALSE){
-      groupByNbPerson($listPerson, $maxPersonValue);
+      $groupsRandom = groupByNbPerson($listPerson, $maxPersonValue);
     }
     else{
       header('Location:groupPersonalisation.php?msg="Veuillez remplir avec que

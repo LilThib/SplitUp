@@ -41,14 +41,34 @@
                 <p class="jumbotron">
                     Site en cours de développement
                 </p>
-
             </div>
 
             <div class="row justify-content-center col-md-12">
                 <h1>Bienvenue sur le site Split-Up!</h1>
             </div>
             <h2>Les groupes</h2>
-
+            <?php
+            if(isset($groupsRandom)){
+                foreach ($groupsRandom as $groups) {
+                  ?>
+                  <table>
+                    <tr>
+                        <th>Nom</th>
+                    </tr>
+                      <?php
+                      foreach ($groups as $person) {
+                        ?>
+                    <tr>
+                        <td><?php echo $person[0]; ?></td>
+                    </tr>
+                <?php
+                }
+                ?>
+                </table>
+            <?php
+              }
+            }
+            ?>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
