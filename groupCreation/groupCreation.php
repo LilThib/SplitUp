@@ -27,7 +27,7 @@
                         <a class="nav-link" href="../index.php">Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Create groups</a>
+                        <a class="nav-link" href="groupPersonalisation.php">Create groups</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../usersTable.php">Manage people</a>
