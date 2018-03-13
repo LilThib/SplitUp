@@ -46,7 +46,7 @@ if (isset($_GET['ClearTable'])) {
                         <a class="nav-link" href="index.php">Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="groups.php">Create groups</a>
+                        <a class="nav-link" href="groupCreation/groupsCreation.php">Create groups</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Manage people</a>
@@ -64,9 +64,9 @@ if (isset($_GET['ClearTable'])) {
 
                             <!-- Text input-->
                             <div class="form-group">
-                                <label class="control-label" for="name">Prénom</label>  
+                                <label class="control-label" for="name">Prénom</label>
                                 <div class="">
-                                    <input id="firstname" name="name" type="text" placeholder="Jean-Michel" class="form-control col-md-8" required="" 
+                                    <input id="firstname" name="name" type="text" placeholder="Jean-Michel" class="form-control col-md-8" required=""
                                            value="<?php echo $name; ?>">
                                 </div>
                             </div>
@@ -100,7 +100,7 @@ if (isset($_GET['ClearTable'])) {
                         <input id="submit" name="submitAdd" type="submit" value="Enregistrer" class="btn btn-default center-block" style="margin-top: 10px;">
                         <div class="text-center" style="margin-top: 10px;"><?php echo $msg; ?></div>
                         </fieldset>
-                    </form>                   
+                    </form>
                     <?php
                     if ($msg != "") {
                         echo '<div class="alert alert-danger">
