@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<?php
-?>
-
 <html lang="en">
     <head>
         <title>Split-Up!</title>
@@ -18,7 +15,7 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body class="text-justify">
-        <!--</nav>-->
+        <!--[nav]-->
         <nav class="navbar navbar-toggleable-md sticky-top">
             <button class="navbar-toggler navbar-toggler-right" style="color: lightgrey;" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon "style="padding-top: none;"><h1 style="margin-top:-15px;">&Congruent;</h1></span>
@@ -27,10 +24,13 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.php">Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Post</a>
+                        <a class="nav-link" href="#">Create groups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="usersTable.php">Manage people</a>
                     </li>
                 </ul>
             </div>
