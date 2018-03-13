@@ -46,7 +46,7 @@ if (isset($_GET['ClearTable'])) {
                         <a class="nav-link" href="index.php">Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="groupCreation/groupsCreation.php">Create groups</a>
+                        <a class="nav-link" href="groupCreation/groupCreation.php">Create groups</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Manage people</a>
