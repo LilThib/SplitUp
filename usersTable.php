@@ -45,7 +45,7 @@ if (isset($_GET['exportTable'])) {
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-4">
-                    <!-- formulaire d'ajout -->
+                    <!-- add form -->
                     <form class="form-horizontal" method="POST">
                         <fieldset>
                             <!-- Form Name -->

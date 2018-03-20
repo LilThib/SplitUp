@@ -45,14 +45,14 @@ fieldset{
 
             </style>
             <form action="GroupCreationAlgorithm.php" method="post">
-              <fieldset><legend>groupes en fonction du nombre de personne par groupe</legend>
+              <fieldset><legend>répartition en fonction du nombre de personnes</legend>
                 <label for="nbPpl"><input type="text" name="nbPpl"></label><input type="submit" value="créer" name="pplSubmit">
 
                 </fieldset>
             </form>
           </br>
           <form action="GroupCreationAlgorithm.php" method="post">
-            <fieldset style="border-color:red;"><legend>groupes en fonction du nombre de groupe total</legend>
+            <fieldset style="border-color:red;"><legend>répartition en fonction du nombre de groupes</legend>
               <label for="nbGrps"> <input type="text" name="nbGrps"></label><input type="submit" value="créer" name="grpsSubmit">
               </fieldset>
           </form>
