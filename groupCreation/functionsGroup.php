@@ -49,7 +49,7 @@ function groupByNbPerson($listPeople, $nbPerson){
 
   $j = 0;
   $i = 0;
-  foreach ($listPeople as $personn) {
+  foreach ($listPeople as $person) {
     if($j >= $nbPerson){
       $j = 0;
       $i++;

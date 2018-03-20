@@ -69,6 +69,7 @@ fieldset{
                 </fieldset>
             </form>
           </br>
+          <form action="GroupCreationAlgorithm.php" method="post">
             <fieldset style="border-color:red;"><legend>groupes en fonction du nombre de groupe total</legend>
               <label for="nbGrps"> <input type="text" name="nbGrps"></label><input type="submit" value="créer" name="grpsSubmit">
               </fieldset>

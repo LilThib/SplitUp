@@ -8,7 +8,7 @@ per groups or the number of groups for a fixed amouth of person, etc
 Date Begin: 20.03.2018
 */
 
-session_start();
+
 
 include_once'../users.php';
 // Variables
@@ -17,6 +17,9 @@ require_once 'functionsGroup.php';
 $buttonMaxPerson = filter_input(INPUT_POST, 'pplSubmit', FILTER_SANITIZE_STRING);
 $buttonMaxGroup = filter_input(INPUT_POST, 'grpsSubmit', FILTER_SANITIZE_STRING);
 $maxPersonValue = filter_input(INPUT_POST, 'nbPpl', FILTER_VALIDATE_INT);
+$nbGroups  = filter_input(INPUT_POST, 'nbGrps', FILTER_VALIDATE_INT);
+
+$rest = false;
 
 $msg = "";
 $listPerson = GetList();
@@ -30,11 +33,15 @@ else{
   if($buttonMaxGroup !== NULL && $buttonMaxGroup !== FALSE){
       $groupsRandom = groupByNbGroup($listPerson, $nbGroups);
     }
-  
+
   else if($buttonMaxPerson !== NULL && $buttonMaxPerson !== FALSE){
 
     if($maxPersonValue !== NULL && $maxPersonValue !== FALSE){
       $groupsRandom = groupByNbPerson($listPerson, $maxPersonValue);
+      if ($groupsRandom[count($groupsRandom)-1] != $maxPersonValue) {
+        $rest = true;
+    }
+
     }
     else{
       header('Location:groupPersonalisation.php?msg="Veuillez remplir avec que

@@ -50,11 +50,19 @@
             <?php
             //var_dump($groupsRandom);
             if(isset($groupsRandom)){
+              $i = 0;
                 foreach ($groupsRandom as $groups) {
+                  $i++;
                   ?>
                   <table>
                     <tr>
-                        <th>Nom</th>
+                        <th><?php
+                        if($rest&&$i==count($groupsRandom))
+                        {
+                          echo "reste";
+                        }else{
+                          echo "groupe  $i";
+                        }; ?></th>
                     </tr>
                       <?php
                       foreach ($groups as $person) {
