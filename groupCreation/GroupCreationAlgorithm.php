@@ -23,6 +23,10 @@ $rest = false;
 
 $msg = "";
 $listPerson = GetList();
+if($listPerson === array())
+{
+  header("location:")
+}
 $groupsRandom = array();
 if($buttonMaxPerson === NULL && $buttonMaxPerson === FALSE && $buttonMaxGroup===NULL
   && $buttonMaxGroup === FALSE)
