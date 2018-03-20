@@ -48,6 +48,7 @@
             </div>
             <h2>Les groupes</h2>
             <?php
+            //var_dump($groupsRandom);
             if(isset($groupsRandom)){
                 foreach ($groupsRandom as $groups) {
                   ?>
