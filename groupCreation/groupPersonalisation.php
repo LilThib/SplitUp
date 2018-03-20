@@ -24,25 +24,7 @@ Date Begin: 20.03.2018
     </head>
     <body class="text-justify">
         <!--[nav]-->
-        <nav class="navbar navbar-toggleable-md sticky-top">
-            <button class="navbar-toggler navbar-toggler-right" style="color: lightgrey;" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon "style="padding-top: none;"><h1 style="margin-top:-15px;">&Congruent;</h1></span>
-            </button>
-            <a class="navbar-brand title1" style="font-family: Cherry Cream Soda" href="index.php">Split-Up</a>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="../index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Create groups</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../usersTable.php">Manage people</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <?php include_once'nav.html'; ?>
         <div class="container">
             <div class="col-md-12">
                 <!--<div class="jumbotron">-->
