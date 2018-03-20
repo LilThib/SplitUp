@@ -55,12 +55,24 @@ Date Begin: 20.03.2018
             <div class="row justify-content-center col-md-12">
                 <h1>Bienvenue sur le site Split-Up!</h1>
             </div>
-            <form>
-              <fieldset style="border-color:red;"><legend>groupes en fonction du nombre de personne par groupe</legend>
-                <input type="text">
+            <style>
+fieldset{
+  border : solid 1px red;
+  padding : 0.5em;
+}
+
+            </style>
+            <form action="GroupCreationAlgorithm.php" method="post">
+              <fieldset><legend>groupes en fonction du nombre de personne par groupe</legend>
+                <label for="nbPpl"><input type="text" name="nbPpl"></label><input type="submit" value="créer" name="pplSubmit">
+
                 </fieldset>
             </form>
-            <h2>groupes en fonction du nombre de groupe total</h2>
+          </br>
+            <fieldset style="border-color:red;"><legend>groupes en fonction du nombre de groupe total</legend>
+              <label for="nbGrps"> <input type="text" name="nbGrps"></label><input type="submit" value="créer" name="grpsSubmit">
+              </fieldset>
+          </form>
 
         </div>
 
