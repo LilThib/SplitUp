@@ -109,7 +109,7 @@ if (isset($_GET['exportTable'])) {
                 <div class="col-sm-12 col-md-8">
                     <form action="ImportData.php" method="post" enctype="multipart/form-data">
                         <label for="file">Import de fichier texte ou csv:</label> <input type="file" name="file" id="file">
-                        <input disabled type="submit" value="Importer" class="btn btn-default center-block">
+                        <input type="submit" value="Importer" class="btn btn-default center-block">
                     </form>
                     <?php
                     UsersTable();
