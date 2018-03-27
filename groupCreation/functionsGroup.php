@@ -9,7 +9,7 @@ Begin date: 20.03.2018
 
 // Algo to group by number max of the group
 function groupByNbGroup($listPeople, $nbGroups){
-  $listPeople = shuffle_assoc($listPeople);
+  $listPeople = shuffleAssoc($listPeople);
   $nbPeople = count($listPeople);
   $mod = $nbPeople % $nbGroups;
   $nbPerson = $nbPeople-$mod;
@@ -35,7 +35,7 @@ function groupByNbGroup($listPeople, $nbGroups){
 }
 
 // Randomizes the list of people
-function shuffle_assoc($array) {
+function shuffleAssoc($array) {
         $keys = array_keys($array);
 
         shuffle($keys);
@@ -52,7 +52,7 @@ function shuffle_assoc($array) {
 // Algo to group by max people
 function groupByNbPerson($listPeople, $nbPerson){
   $allGroup = array();
-  $listPeople = shuffle_assoc($listPeople);
+  $listPeople = shuffleAssoc($listPeople);
 
   $j = 0;
   $i = 0;
