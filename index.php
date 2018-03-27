@@ -1,5 +1,16 @@
+<?php
+/*
+Project: SplitUp
+Autors: Jorge Goncalves, Grégory Preisig, Thibaut Michaud
+Description: Create a group with ultiple parameters, like the number or person
+per groups or the number of groups for a fixed amouth of person, etc
+Begin date: 20.03.2018
+*/
+
+ ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <title>Split-Up!</title>
 
@@ -18,13 +29,7 @@
         <!--[nav]-->
         <?php include_once'nav.html'; ?>
         <div class="container">
-            <div class="col-md-12">
-                <!--[jumbotron"]-->
-                <p class="jumbotron">
-                    Site en cours de développement
-                </p>
 
-            </div>
 
             <div class="row justify-content-center col-md-12">
                 <h1>Bienvenue sur le site Split-Up!</h1>

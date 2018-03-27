@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<!--
+<?php
+/*
 Project: SplitUp
 Autors: Jorge Goncalves, Grégory Preisig, Thibaut Michaud
 Description: Create a group with ultiple parameters, like the number or person
 per groups or the number of groups for a fixed amouth of person, etc
-Date Begin: 20.03.2018
--->
+Begin date: 20.03.2018
+*/
+
+?>
 <html lang="fr">
     <head>
         <title>Split-Up!</title>
@@ -26,14 +29,6 @@ Date Begin: 20.03.2018
         <!--[nav]-->
         <?php include_once'nav.html'; ?>
         <div class="container">
-            <div class="col-md-12">
-                <!--<div class="jumbotron">-->
-                <p class="jumbotron">
-                    Site en cours de développement
-                </p>
-
-            </div>
-
             <div class="row justify-content-center col-md-12">
                 <h1>Bienvenue sur le site Split-Up!</h1>
             </div>
@@ -46,14 +41,14 @@ fieldset{
             </style>
             <form action="GroupCreationAlgorithm.php" method="post">
               <fieldset><legend>répartition en fonction du nombre de personnes</legend>
-                <label for="nbPpl"><input type="text" name="nbPpl"></label><input type="submit" value="créer" name="pplSubmit">
+                <label for="nbPpl"><input type="number" name="nbPpl"></label><input type="submit" value="créer" name="pplSubmit">
 
                 </fieldset>
             </form>
           </br>
           <form action="GroupCreationAlgorithm.php" method="post">
             <fieldset style="border-color:red;"><legend>répartition en fonction du nombre de groupes</legend>
-              <label for="nbGrps"> <input type="text" name="nbGrps"></label><input type="submit" value="créer" name="grpsSubmit">
+              <label for="nbGrps"> <input type="number" name="nbGrps"></label><input type="submit" value="créer" name="grpsSubmit">
               </fieldset>
           </form>
 

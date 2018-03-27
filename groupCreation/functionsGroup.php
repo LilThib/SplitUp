@@ -1,4 +1,11 @@
 <?php
+/*
+Project: SplitUp
+Autors: Jorge Goncalves, Grégory Preisig, Thibaut Michaud
+Description: Create a group with ultiple parameters, like the number or person
+per groups or the number of groups for a fixed amouth of person, etc
+Begin date: 20.03.2018
+*/
 
 // Algo to group by number max of the group
 function groupByNbGroup($listPeople, $nbGroups){
@@ -27,7 +34,7 @@ function groupByNbGroup($listPeople, $nbGroups){
   return $groups;
 }
 
-// Put random the list of person
+// Randomizes the list of people
 function shuffle_assoc($array) {
         $keys = array_keys($array);
 
@@ -42,7 +49,7 @@ function shuffle_assoc($array) {
         return $array;
 }
 
-// Algo to group by max personn
+// Algo to group by max people
 function groupByNbPerson($listPeople, $nbPerson){
   $allGroup = array();
   $listPeople = shuffle_assoc($listPeople);

@@ -1,3 +1,14 @@
+<?php
+/*
+Project: SplitUp
+Autors: Jorge Goncalves, Grégory Preisig, Thibaut Michaud
+Description: Create a group with ultiple parameters, like the number or person
+per groups or the number of groups for a fixed amouth of person, etc
+Begin date: 20.03.2018
+*/
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -18,19 +29,11 @@
         <!--[nav]-->
         <?php include_once'nav.html'; ?>
         <div class="container">
-            <div class="col-md-12">
-                <!--<div class="jumbotron">-->
-                <p class="jumbotron">
-                    Site en cours de développement
-                </p>
-            </div>
-
             <div class="row justify-content-center col-md-12">
                 <h1>Bienvenue sur le site Split-Up!</h1>
             </div>
             <h2>Les groupes</h2>
             <?php
-            //var_dump($groupsRandom);
             if(isset($groupsRandom)){
               $i = 0;
                 foreach ($groupsRandom as $groups) {

@@ -1,5 +1,4 @@
 <?php
-
 /*
 Project: SplitUp
 Autors: Jorge Goncalves, Grégory Preisig, Thibaut Michaud
@@ -7,7 +6,6 @@ Description: Create a group with ultiple parameters, like the number or person
 per groups or the number of groups for a fixed amouth of person, etc
 Begin date: 20.03.2018
 */
-
 
 
 include_once'../users.php';
@@ -19,13 +17,17 @@ $buttonMaxGroup = filter_input(INPUT_POST, 'grpsSubmit', FILTER_SANITIZE_STRING)
 $maxPersonValue = filter_input(INPUT_POST, 'nbPpl', FILTER_VALIDATE_INT);
 $nbGroups  = filter_input(INPUT_POST, 'nbGrps', FILTER_VALIDATE_INT);
 
+
+$maxPersonValue = abs($maxPersonValue);
+$nbGroups = abs($nbGroups);
+
 $rest = false;
 
 $msg = "";
 $listPerson = GetList();
 if($listPerson === array())
 {
-  header("location:")
+  header("location:../usersTable.php");
 }
 $groupsRandom = array();
 if($buttonMaxPerson === NULL && $buttonMaxPerson === FALSE && $buttonMaxGroup===NULL
