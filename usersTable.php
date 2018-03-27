@@ -12,10 +12,10 @@ include './users.php';
 
 $msg = "";
 $name = (isset($_POST['name'])) ? trim(filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING)) : "";
-$sexe = (isset($_POST['sexe'])) ? $_POST['sexe'] : "";
+$gender = (isset($_POST['sexe'])) ? $_POST['sexe'] : "";
 
 if (isset($_POST['submitAdd'])) {
-    addUser($name, $sexe);
+    addUser($name, $gender);
     $msg = "Personne bien ajoutée";
     header("Location: usersTable.php");
 }
@@ -70,23 +70,23 @@ if (isset($_GET['exportTable'])) {
 
                             <!-- Multiple Radios -->
                             <div class="form-group">
-                                <label class="control-label" for="sexe">Sexe</label>
+                                <label class="control-label" for="sex">Sexe</label>
                                 <div class="">
                                     <div class="radio">
                                         <label for="sexe-0">
-                                            <input type="radio" name="sexe" id="sexe-0" value="Homme" checked="checked">
+                                            <input type="radio" name="sex" id="sexe-0" value="Homme" checked="checked">
                                             Homme
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label for="sexe-1">
-                                            <input type="radio" name="sexe" id="sexe-1" value="Femme">
+                                            <input type="radio" name="sex" id="sexe-1" value="Femme">
                                             Femme
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label for="sexe-2">
-                                            <input type="radio" name="sexe" id="sexe-2" value="Autre">
+                                            <input type="radio" name="sex" id="sexe-2" value="Autre">
                                             Autre
                                         </label>
                                     </div>

@@ -32,6 +32,7 @@ Begin date: 20.03.2018
             <div class="row justify-content-center col-md-12">
                 <h1>Bienvenue sur le site Split-Up!</h1>
             </div>
+            <!-- Create the table with groups -->
             <h2>Les groupes</h2>
             <?php
             if(isset($groupsRandom)){

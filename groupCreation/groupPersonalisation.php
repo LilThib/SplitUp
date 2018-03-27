@@ -39,6 +39,7 @@ fieldset{
 }
 
             </style>
+            <!--the form for maxPersonn -->
             <form action="GroupCreationAlgorithm.php" method="post">
               <fieldset><legend>répartition en fonction du nombre de personnes</legend>
                 <label for="nbPpl"><input type="number" name="nbPpl"></label><input type="submit" value="créer" name="pplSubmit">
@@ -46,6 +47,7 @@ fieldset{
                 </fieldset>
             </form>
           </br>
+          <!--the form for maxGroups-->
           <form action="GroupCreationAlgorithm.php" method="post">
             <fieldset style="border-color:red;"><legend>répartition en fonction du nombre de groupes</legend>
               <label for="nbGrps"> <input type="number" name="nbGrps"></label><input type="submit" value="créer" name="grpsSubmit">

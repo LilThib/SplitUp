@@ -9,6 +9,7 @@ Begin date: 20.03.2018
 
 session_start();
 
+// Get the list of users in session
 function GetList() {
     if (!isset($_SESSION['users'])) {
         $_SESSION['users'] = array();
@@ -17,15 +18,18 @@ function GetList() {
     }
 }
 
-function addUser($name, $sexe) {
-    array_push($_SESSION['users'], array($name, $sexe));
+// Add a user in session list
+function addUser($name, $sex) {
+    array_push($_SESSION['users'], array($name, $sex));
 }
 
+//Delete the user
 function deleteUser($name) {
     $users = GetList();
     unset($users[getUser($name)]);
 }
 
+// Clear all users in session
 function ClearUsers() {
     $_SESSION = array();
     if (ini_get("session.use_cookies")) {
@@ -35,17 +39,20 @@ function ClearUsers() {
     session_destroy();
 }
 
+// Update the user
 function UpdateUser($oldName, $newName) {
     $users = GetList();
     $users[getUser($oldName)] = $newName;
 }
 
+// Get a user
 function getUser($name) {
     $users = GetList();
     $key = array_search($name, $users);
     return $key;
 }
 
+// See if a user exist already
 function UserXsist($name) {
     $users = GetList();
     if (array_search($name, $users) === false) {
@@ -55,6 +62,7 @@ function UserXsist($name) {
     }
 }
 
+// Create the table with users
 function UsersTable() {
     echo '<h3>Table de tous les utilisateurs</h3>
             <table class="table table-bordered table-hover table-fixed">
@@ -73,6 +81,7 @@ function UsersTable() {
     echo '</table>';
 }
 
+// Read the csv containing users
 function readCSV($csvFile) {
     $file_handle = fopen($csvFile, 'r');
     while (!feof($file_handle)) {
@@ -82,6 +91,7 @@ function readCSV($csvFile) {
     return $line_of_text;
 }
 
+// Generate a csv with the users data
 function generateCsv($data, $delimiter = ',', $enclosure = '"') {
     $handle = fopen('php://temp', 'r+');
     foreach ($data as $line) {
@@ -96,6 +106,7 @@ function generateCsv($data, $delimiter = ',', $enclosure = '"') {
     $_SESSION['csv'] = $contents;
 }
 
+// Download the users list
 function download($filepath) {
     header('Content-Disposition: attachment; filename="' . basename($filepath) . '"');
     header('Content-type: text/csv');

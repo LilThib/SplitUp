@@ -25,21 +25,26 @@ $rest = false;
 
 $msg = "";
 $listPerson = GetList();
+// If the list is empty
 if($listPerson === array())
 {
   header("location:../usersTable.php");
 }
 $groupsRandom = array();
+// If there is a problem with server or html
 if($buttonMaxPerson === NULL && $buttonMaxPerson === FALSE && $buttonMaxGroup===NULL
   && $buttonMaxGroup === FALSE)
 {
   $msg .= "Impossible de créer un groupe réessayer ultérieurement";
 }
+// Create groups with the given button function
 else{
+  // For maxGroups
   if($buttonMaxGroup !== NULL && $buttonMaxGroup !== FALSE){
       $groupsRandom = groupByNbGroup($listPerson, $nbGroups);
     }
 
+  // For maxPerson
   else if($buttonMaxPerson !== NULL && $buttonMaxPerson !== FALSE){
 
     if($maxPersonValue !== NULL && $maxPersonValue !== FALSE){
