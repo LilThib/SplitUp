@@ -10,7 +10,9 @@ Begin date: 20.03.2018
 include './users.php';
 
 if ($_FILES["file"]["error"] > 0) {
-    echo "Veuillez sélectionner un fichier valide";
+    echo "<script> alert(\"Veuillez sélectionner un fichier valide\"); window.location.replace(\"usersTable.php\"); </script>";
+
+
 } elseif ($_FILES["file"]["type"] !== "text/csv") {
     //Open the file.
     $fp = fopen($_FILES['file']['tmp_name'], "rb");
