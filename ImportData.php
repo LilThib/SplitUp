@@ -10,7 +10,7 @@ Begin date: 20.03.2018
 include './users.php';
 
 if ($_FILES["file"]["error"] > 0) {
-    echo "Error: " . $_FILES["file"]["error"] . "<br />";
+    echo "Veuillez sélectionner un fichier valide";
 } elseif ($_FILES["file"]["type"] !== "text/csv") {
     //Open the file.
     $fp = fopen($_FILES['file']['tmp_name'], "rb");

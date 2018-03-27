@@ -49,7 +49,7 @@ else{
 
     if($maxPersonValue !== NULL && $maxPersonValue !== FALSE){
       $groupsRandom = groupByNbPerson($listPerson, $maxPersonValue);
-      if ($groupsRandom[count($groupsRandom)-1] != $maxPersonValue) {
+      if (count($groupsRandom[count($groupsRandom)-1]) != $maxPersonValue) {
         $rest = true;
     }
 
