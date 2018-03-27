@@ -18,8 +18,8 @@ $maxPersonValue = filter_input(INPUT_POST, 'nbPpl', FILTER_VALIDATE_INT);
 $nbGroups  = filter_input(INPUT_POST, 'nbGrps', FILTER_VALIDATE_INT);
 
 
-$maxPersonValue = abs($maxPersonValue);
-$nbGroups = abs($nbGroups);
+$maxPersonValue = abs($maxPersonValue)==0?1:abs($maxPersonValue);
+$nbGroups = abs($nbGroups)==0?1:abs($nbGroups);
 
 $rest = false;
 

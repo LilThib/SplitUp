@@ -63,7 +63,7 @@ if (isset($_GET['exportTable'])) {
                             <div class="form-group">
                                 <label class="control-label" for="name">Prénom</label>
                                 <div class="">
-                                    <input id="firstname" name="name" type="text" placeholder="Jean-Michel" class="form-control col-md-8" required=""
+                                    <input id="firstname" name="name" type="text" placeholder="Jean-Michelle" class="form-control col-md-8" required=""
                                            value="<?php echo $name; ?>">
                                 </div>
                             </div>
@@ -109,7 +109,7 @@ if (isset($_GET['exportTable'])) {
                 <div class="col-sm-12 col-md-8">
                     <form action="ImportData.php" method="post" enctype="multipart/form-data">
                         <label for="file">Import de fichier texte ou csv:</label> <input type="file" name="file" id="file">
-                        <input type="submit" value="Submit" class="btn btn-default center-block">
+                        <input disabled type="submit" value="Importer" class="btn btn-default center-block">
                     </form>
                     <?php
                     UsersTable();
@@ -118,7 +118,7 @@ if (isset($_GET['exportTable'])) {
                         <input id="ClearTable" name="ClearTable" type="submit" value="Vider le tableau" class="btn btn-default center-block" style="margin-top: 10px;">
                     </form>
                     <form name="export">
-                        <input id="exportTable" name="exportTable" type="submit" value="Exporter le tableau" class="btn btn-default center-block" style="margin-top: 10px;">
+                        <input disabled id="exportTable" name="exportTable" type="submit" value="Exporter le tableau" class="btn btn-default center-block" style="margin-top: 10px;">
                     </form>
 
                 </div>
